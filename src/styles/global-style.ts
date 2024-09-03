@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: none;
     box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
   }
 
   a {

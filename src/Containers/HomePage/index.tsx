@@ -2,6 +2,8 @@ import { theme } from '@/styles/theme';
 import {
   HomePageContainer,
   PhotoContainer,
+  SkillsContent,
+  SkillsPageContainer,
   TextContainer,
   TitleH1,
   TitleH2,
@@ -9,6 +11,7 @@ import {
 import Image from 'next/image';
 import bgline from '@/config/img/home/bg-line.svg';
 import bgwave from '@/config/img/home/bg-wave.svg';
+import lineSkills from '@/config/img/SkillsPage/middle-line.svg';
 import dots from '@/config/img/home/photo-dots.svg';
 import Header from '@/components/Header';
 
@@ -84,6 +87,50 @@ export default function HomePage() {
           />
         </PhotoContainer>
       </HomePageContainer>
+      <SkillsPageContainer>
+        <Image
+          src={lineSkills}
+          height={100}
+          width={100}
+          priority
+          alt="teste"
+          style={{
+            width: 'fit-content',
+            height: `100vh`,
+            position: 'absolute',
+            zIndex: 1,
+            right: '50%',
+            left: '45%',
+          }}
+        />
+
+        <SkillsContent>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
+            aut hic autem quae et iure omnis facilis consequuntur eum illum.
+          </p>
+          <h2>Back-end</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
+            aut hic autem quae et iure omnis facilis consequuntur eum illum.
+          </p>
+        </SkillsContent>
+        <SkillsContent>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
+            aut hic autem quae et iure omnis facilis consequuntur eum illum.
+          </p>
+          <h2>Back-end</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
+            aut hic autem quae et iure omnis facilis consequuntur eum illum.
+          </p>
+        </SkillsContent>
+      </SkillsPageContainer>
     </>
   );
 }

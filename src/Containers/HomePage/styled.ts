@@ -37,3 +37,34 @@ export const PhotoContainer = styled.div`
   background-repeat: no-repeat;
   border: none;
 `;
+
+export const SkillsPageContainer = styled.div`
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.gray};
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const SkillsContent = styled.div`
+  width: 45vw;
+  height: 100vh;
+  color: ${({ theme }) => theme.colors.primary};
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  h2 {
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.25vw;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+  }
+`;
