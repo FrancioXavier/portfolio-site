@@ -1,7 +1,11 @@
 import { theme } from '@/styles/theme';
 import {
+  AboutMeContainer,
+  AboutMeContent,
   HomePageContainer,
+  MyProjectsContent,
   PhotoContainer,
+  SeeMoreButton,
   SkillsContent,
   SkillsPageContainer,
   TextContainer,
@@ -13,6 +17,8 @@ import bgline from '@/config/img/home/bg-line.svg';
 import bgwave from '@/config/img/home/bg-wave.svg';
 import lineSkills from '@/config/img/SkillsPage/middle-line.svg';
 import dots from '@/config/img/home/photo-dots.svg';
+import me from '@/config/img/AboutMe/me.svg';
+// import lines from '@/config/img/Projects/lines.svg';
 import Header from '@/components/Header';
 
 export default function HomePage() {
@@ -130,6 +136,61 @@ export default function HomePage() {
             aut hic autem quae et iure omnis facilis consequuntur eum illum.
           </p>
         </SkillsContent>
+      </SkillsPageContainer>
+      <AboutMeContainer>
+        <AboutMeContent>
+          <div>
+            <h2>
+              Sobre mim<span style={{ color: theme.colors.white }}>.</span>
+            </h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam rem tempore ex magnam laudantium enim. Voluptate
+              consequuntur qui, minima odit veritatis earum aperiam cumque vero
+              tempore, reiciendis iusto? Officiis, corrupti! Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Laudantium corporis,
+              similique consequatur nihil iusto pariatur dolorum illum atque
+              nesciunt nisi. Ullam molestias dignissimos quam excepturi ipsa
+              molestiae sunt enim animi! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Blanditiis, quas quod nostrum quis laudantium
+              atque autem praesentium architecto fugit placeat minus labore eum.
+              Repellendus in nihil eveniet non voluptates tempore!
+            </p>
+          </div>
+        </AboutMeContent>
+        <AboutMeContent>
+          <Image
+            src={me}
+            height={100}
+            width={100}
+            priority
+            alt="teste"
+            style={{
+              width: '80%',
+              height: `65vh`,
+              zIndex: 0,
+            }}
+          />
+        </AboutMeContent>
+      </AboutMeContainer>
+
+      <SkillsPageContainer
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: theme.colors.gray,
+        }}
+      >
+        <MyProjectsContent>
+          <h2>Sobre meu trabalho</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
+            dignissimos inventore quia, quas debitis eveniet? Sapiente aperiam
+            doloremque quidem tempora quam quaerat officiis maxime repudiandae
+            impedit voluptatibus. Totam, expedita facilis.
+          </p>
+          <SeeMoreButton>Ver mais</SeeMoreButton>
+        </MyProjectsContent>
       </SkillsPageContainer>
     </>
   );

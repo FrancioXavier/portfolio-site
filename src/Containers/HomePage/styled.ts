@@ -68,3 +68,74 @@ export const SkillsContent = styled.div`
     font-weight: bold;
   }
 `;
+
+export const AboutMeContainer = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
+  display: flex;
+
+  div {
+    display: flex;
+    align-items: start;
+    height: 100%;
+    width: 50vw;
+    margin-left: 4vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 {
+    width: 100%;
+    font-size: 5vw;
+    color: ${({ theme }) => theme.colors.secondary};
+    text-align: left;
+  }
+
+  p {
+    font-size: 1.25vw;
+    width: 70%;
+    color: ${({ theme }) => theme.colors.white};
+  }
+`;
+
+export const AboutMeContent = styled.div`
+  width: 50vw;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+`;
+
+export const MyProjectsContent = styled.div`
+  width: 60vw;
+  height: 70vh;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h2 {
+    font-size: 4vw;
+    color: ${({ theme }) => theme.colors.primary};
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.5vw;
+    color: ${({ theme }) => theme.colors.black};
+    text-align: center;
+    width: 70%;
+  }
+`;
+
+export const SeeMoreButton = styled.button`
+  font-size: 1.5vw;
+  border: 3px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.white};
+  padding: 1vw 5vw;
+  border-radius: 10px;
+`;
