@@ -20,8 +20,15 @@ import dots from '@/config/img/home/photo-dots.svg';
 import me from '@/config/img/AboutMe/me.svg';
 // import lines from '@/config/img/Projects/lines.svg';
 import Header from '@/components/Header';
+import Carousel from '@/components/Carousel';
+import { EmblaOptionsType } from 'embla-carousel';
 
 export default function HomePage() {
+  const SLIDE_COUNT = 5;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+  const OPTIONS: EmblaOptionsType = {
+    loop: true,
+  };
   return (
     <>
       <Header />
@@ -111,11 +118,7 @@ export default function HomePage() {
         />
 
         <SkillsContent>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
-            aut hic autem quae et iure omnis facilis consequuntur eum illum.
-          </p>
+          <Carousel slides={SLIDES} options={OPTIONS} />
           <h2>Back-end</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
