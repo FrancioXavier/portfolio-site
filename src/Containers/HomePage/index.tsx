@@ -7,6 +7,7 @@ import {
   PhotoContainer,
   SeeMoreButton,
   SkillsContent,
+  SkillsIcons,
   SkillsPageContainer,
   TextContainer,
   TitleH1,
@@ -18,17 +19,13 @@ import bgwave from '@/config/img/home/bg-wave.svg';
 import lineSkills from '@/config/img/SkillsPage/middle-line.svg';
 import dots from '@/config/img/home/photo-dots.svg';
 import me from '@/config/img/AboutMe/me.svg';
-// import lines from '@/config/img/Projects/lines.svg';
+import { FaBootstrap, FaNodeJs } from 'react-icons/fa6';
+import { SiMysql, SiNextdotjs } from 'react-icons/si';
+import { SiMongodb } from 'react-icons/si';
 import Header from '@/components/Header';
-import Carousel from '@/components/Carousel';
-import { EmblaOptionsType } from 'embla-carousel';
+import { BiLogoTypescript } from 'react-icons/bi';
 
 export default function HomePage() {
-  const SLIDE_COUNT = 5;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-  const OPTIONS: EmblaOptionsType = {
-    loop: true,
-  };
   return (
     <>
       <Header />
@@ -118,7 +115,11 @@ export default function HomePage() {
         />
 
         <SkillsContent>
-          <Carousel slides={SLIDES} options={OPTIONS} />
+          <SkillsIcons>
+            <SiMysql size={60} />
+            <FaNodeJs size={80} />
+            <SiMongodb size={60} />
+          </SkillsIcons>
           <h2>Back-end</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -132,12 +133,12 @@ export default function HomePage() {
             quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
             aut hic autem quae et iure omnis facilis consequuntur eum illum.
           </p>
-          <h2>Back-end</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            quam labore nobis nemo, asperiores magnam quod atque ad. Repudiandae
-            aut hic autem quae et iure omnis facilis consequuntur eum illum.
-          </p>
+          <h2>Front-end</h2>
+          <SkillsIcons>
+            <BiLogoTypescript size={60} />
+            <SiNextdotjs size={80} />
+            <FaBootstrap size={60} />
+          </SkillsIcons>
         </SkillsContent>
       </SkillsPageContainer>
       <AboutMeContainer>

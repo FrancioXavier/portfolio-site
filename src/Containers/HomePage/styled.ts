@@ -25,6 +25,20 @@ export const TitleH2 = styled.h2`
   color: ${({ theme }) => theme.colors.white};
 `;
 
+export const SkillsIcons = styled.div`
+  color: ${({ theme }) => theme.colors.primary};
+  width: 25vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    width: 6vw;
+    height: 6vw;
+  }
+`;
+
 export const PhotoContainer = styled.div`
   width: 20vw;
   height: 20vw;
