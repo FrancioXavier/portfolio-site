@@ -153,3 +153,58 @@ export const SeeMoreButton = styled.button`
   padding: 1vw 5vw;
   border-radius: 10px;
 `;
+
+export const TalkWithMe = styled.div`
+  height: 100vh;
+  width: 100%;
+  background: ${({ theme }) => theme.colors.gray};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  .inputLabel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+
+    label {
+      color: rgba(61, 21, 95, 0.5);
+    }
+
+    &:focus-within label {
+      color: ${({ theme }) => theme.colors.lightPrimary};
+    }
+
+    input {
+      width: 15vw;
+      border: none;
+      border-bottom: 2px solid rgba(61, 21, 95, 0.5);
+    }
+
+    input:focus {
+      border-bottom: 2px solid ${({ theme }) => theme.colors.lightPrimary};
+    }
+
+    textarea {
+      border: none;
+      border-bottom: 2px solid rgba(61, 21, 95, 0.5);
+    }
+
+    textarea:focus {
+      border-bottom: 2px solid ${({ theme }) => theme.colors.lightPrimary};
+    }
+  }
+
+  .inputEmail {
+    margin-left: 3vw;
+  }
+
+  .formComponents {
+    display: flex;
+  }
+`;

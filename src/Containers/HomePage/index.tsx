@@ -2,6 +2,7 @@ import { theme } from '@/styles/theme';
 import {
   AboutMeContainer,
   AboutMeContent,
+  ContactForm,
   HomePageContainer,
   MyProjectsContent,
   PhotoContainer,
@@ -9,6 +10,7 @@ import {
   SkillsContent,
   SkillsIcons,
   SkillsPageContainer,
+  TalkWithMe,
   TextContainer,
   TitleH1,
   TitleH2,
@@ -24,8 +26,22 @@ import { SiMysql, SiNextdotjs } from 'react-icons/si';
 import { SiMongodb } from 'react-icons/si';
 import Header from '@/components/Header';
 import { BiLogoTypescript } from 'react-icons/bi';
+import { useState } from 'react';
 
 export default function HomePage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <>
       <Header />
@@ -196,6 +212,45 @@ export default function HomePage() {
           <SeeMoreButton>Ver mais</SeeMoreButton>
         </MyProjectsContent>
       </SkillsPageContainer>
+      <TalkWithMe>
+        <MyProjectsContent>
+          <h2>Quer falar comigo?</h2>
+          <ContactForm>
+            <div className="formComponents">
+              <div className="inputLabel">
+                <label htmlFor="name">Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="inputLabel inputEmail">
+                <label htmlFor="email">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="inputLabel">
+              <label htmlFor="message">Mensagem</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">Enviar</button>
+          </ContactForm>
+        </MyProjectsContent>
+      </TalkWithMe>
     </>
   );
 }
